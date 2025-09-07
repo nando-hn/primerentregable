@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710061780218",
+    "project_id": "mi-primera-app-a18e6",
+    "storage_bucket": "mi-primera-app-a18e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710061780218:android:1dfc0bc3d8f6e49f096d43",
+        "android_client_info": {
+          "package_name": "com.miprimeraapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4KNj-28WDkB3QgBEX3CJb6G8_qju6-r0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

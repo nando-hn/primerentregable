@@ -1,21 +1,31 @@
+// android/build.gradle (nivel de proyecto)
+
 buildscript {
     ext {
-        buildToolsVersion = "36.0.0"
-        minSdkVersion = 24
-        compileSdkVersion = 36
-        targetSdkVersion = 36
-        ndkVersion = "27.1.12297006"
-        kotlinVersion = "2.1.20"
+   buildToolsVersion = "35.0.0"  // o puedes omitirlo y dejar que AGP elija
+    minSdkVersion     = 24
+    compileSdkVersion = 35         // ⬅️ necesario por androidx.core:1.16.0
+    targetSdkVersion  = 35         // (puede ser 34, pero 35 va bien)
+    ndkVersion        = "27.2.12479018"
     }
+
     repositories {
         google()
         mavenCentral()
     }
+
     dependencies {
-        classpath("com.android.tools.build:gradle")
-        classpath("com.facebook.react:react-native-gradle-plugin")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+   classpath("com.android.tools.build:gradle:8.11.0")
+    classpath("com.facebook.react:react-native-gradle-plugin")
+    classpath("com.google.gms:google-services:4.4.2")
     }
 }
 
-apply plugin: "com.facebook.react.rootproject"
+// (Opcional si tu proyecto aún usa este bloque)
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        maven { url("$rootDir/../node_modules/jsc-android/dist") }
+    }
+}
